@@ -22,12 +22,12 @@ prompt_yn() {
 
 # Update and upgrade system
 echo "Updating and upgrading system..."
-sudo apt update && sudo apt full-upgrade -y
+sudo apt update -y && sudo apt full-upgrade -y
 check_command "Failed to update and upgrade system"
 
 # Install required packages
 echo "Installing required packages..."
-sudo apt install --upgrade python3-update-manager update-manager-core curl gpg python3 python3-pip -y
+sudo apt install --upgrade python3-update-manager update-manager-core curl gpg python3 python3-pip iptables -y
 check_command "Failed to install required packages"
 
 # Install ZeroTier
